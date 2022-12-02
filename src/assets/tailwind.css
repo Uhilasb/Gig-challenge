@@ -1,0 +1,41 @@
+@import "./main.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* form group custom style */
+.form-control {
+  @apply flex flex-col gap-2;
+}
+
+/* label style */
+.input--label {
+  @apply font-medium text-sm text-[#747474];
+}
+
+/* text input style */
+.text--input {
+  @apply bg-[#FAFAFA] border border-[#EBEBEB] rounded-xl h-10 w-full py-[2px] px-[10px];
+}
+
+/* select input style */
+.select--input {
+  @apply bg-[#FAFAFA] border border-[#EBEBEB] rounded-xl h-10 py-[2px] px-[10px];
+}
+
+/* text input focused */
+.text--input:focus{
+    @apply outline-none
+}
+
+/* main button style */
+.btn-filled{
+  @apply h-10 rounded-lg bg-mainColor text-white font-semibold text-[14px];
+}
+
+/* secondary btn style */
+.btn-outlined{
+  @apply h-10 rounded-lg bg-white text-mainColor border border-mainColor font-medium text-[14px];
+}
