@@ -73,13 +73,13 @@ onMounted(() => {
 </script>
 <template>
   <div class="bg-[#F5F5F5] max-w-full h-screen flex justify-center">  
-  <div class="flex justify-start w-[90%] m-auto bg-white max-w-lg rounded-3xl h-auto">
+  <div class="flex justify-start w-[90%] my-[4rem] mx-auto md:m-auto bg-white max-w-lg rounded-3xl h-fit">
       <div
           class="flex flex-col justify-start items-center gap-6 w-full p-2"
       >
         <h1 class="font-semibold text-4xl pt-4">{{route.name === 'create' ? 'Add Contacts': 'Edit Contact'}}</h1>
         <div class="from-inputs w-full px-6 py-6 flex flex-col gap-6">
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div :class="{ error: v$.firstName.$error }">
               <label class="input--label">First name</label>
               <input type="text" class="text--input w-full" v-model="newContact.firstName" required/>

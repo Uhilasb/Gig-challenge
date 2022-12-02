@@ -11,13 +11,13 @@ const router = createRouter({
     {
       path: '/create',
       name: 'create',
-      component: () => import('../views/Contacts/Create.vue')
+      component: () => import('../views/Contacts/ContactForm.vue')
     },
     {
       path: '/:id/edit',
       name: 'edit',
       props: true,
-      component: () => import('../views/Contacts/Create.vue')
+      component: () => import('../views/Contacts/ContactForm.vue')
     }
   ]
 })

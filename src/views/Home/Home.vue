@@ -13,8 +13,11 @@ const deleteContact = (id: number) => {
 
 
 <template>
-  <div class="flex flex-col w-full bg-[#F5F5F5] rounded-md h-screen pt-12">
-  <h1 class="font-bold text-3xl my-4 text-start pl-6">My contact list</h1>
+  <div class="flex flex-col w-full rounded-md h-screen pt-12 container">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-xl lg:text-3xl my-4 text-start">My contact list</h1>
+    <router-link class="text-lg text-white btn-outlined p-1" :to="{ name: 'create'}">Add Contact</router-link> 
+  </div>
   <div class="overflow-x-auto bg-white rounded-lg">
     <div class="py-2 inline-block min-w-full">
       <div class="overflow-x-auto">
@@ -68,7 +71,7 @@ const deleteContact = (id: number) => {
               
             </tr>
             <tr v-if="store.getContacts.length === 0">
-              <td class="text-[#A4A4A4] text-lg px-6 py-4 whitespace-nowrap">
+              <td colspan="6" class=" text-[#A4A4A4] text-lg px-6 py-4 whitespace-nowrap text-center">
                 No available contacts
               </td>
             </tr>

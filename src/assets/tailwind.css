@@ -5,6 +5,18 @@
 @tailwind utilities;
 
 
+/* container */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+  .container{
+    padding: 10px
+  }
+}
+
 /* form group custom style */
 .form-control {
   @apply flex flex-col gap-2;
